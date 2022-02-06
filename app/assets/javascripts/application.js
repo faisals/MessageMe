@@ -16,3 +16,8 @@
 //= require turbolinks
 //= require semantic-ui
 //= require_tree .
+
+/* enable nav menu drop down only once turbolinks loads */
+$(document).on('turbolinks:load', function () {
+  $('.ui.dropdown').dropdown()
+})
